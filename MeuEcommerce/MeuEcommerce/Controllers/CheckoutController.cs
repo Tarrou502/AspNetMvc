@@ -60,7 +60,7 @@ namespace MeuEcommerce.Controllers
 
 
             //return Redirect("/Home/Index");
-            return RedirectToAction(ActionName: "Index", ControllerName:"Home");
+            return RedirectToAction( actionName: "Index", controllerName:"Home");
 
         }
         /*
