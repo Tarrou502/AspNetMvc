@@ -47,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -154,10 +160,19 @@
     <Compile Include="Controllers\ErrorsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
-    <Compile Include="DAL\DbContents.cs" />
+    <Compile Include="DAL\Database.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812182346227_NovoBanco.cs" />
+    <Compile Include="Migrations\201812182346227_NovoBanco.Designer.cs">
+      <DependentUpon>201812182346227_NovoBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812182350014_AlteracaodoNome.cs" />
+    <Compile Include="Migrations\201812182350014_AlteracaodoNome.Designer.cs">
+      <DependentUpon>201812182350014_AlteracaodoNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Carrinho.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\CheckoutIndexViewModel.cs" />
@@ -265,6 +280,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812182346227_NovoBanco.resx">
+      <DependentUpon>201812182346227_NovoBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812182350014_AlteracaodoNome.resx">
+      <DependentUpon>201812182350014_AlteracaodoNome.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -10,7 +10,7 @@ namespace MeuEcommerce.Controllers
 {
     public class BaseController: Controller
     {
-        protected DbContents _dbc = new DbContents();
+        protected Database _dbc = new Database();
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {

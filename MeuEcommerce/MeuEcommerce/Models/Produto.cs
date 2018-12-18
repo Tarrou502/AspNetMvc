@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace MeuEcommerce.Models
 {
+    [Table("Produtos")]
     public class Produto
     {
         static Random _random = new Random();
@@ -16,14 +18,14 @@ namespace MeuEcommerce.Models
         public int Id { get; set; }
         public int IdCategoria { get; set; }
 
-        public Produto(string nome, int id, string img, int idCategoria)
-        {
-            Id = id;
-            Nome = nome;
-            Preco = _random.Next(10, 100) + (decimal)_random.NextDouble();
-            Descricao = "Descrição - " + Nome;
-            Imagem = "/img/" + img + ".jpg";
-            IdCategoria = idCategoria;
-        }
+        //public Produto(string nome, int id, string img, int idCategoria)
+        //{
+        //    Id = id;
+        //    Nome = nome;
+        //    Preco = _random.Next(10, 100) + (decimal)_random.NextDouble();
+        //    Descricao = "Descrição - " + Nome;
+        //    Imagem = "/img/" + img + ".jpg";
+        //    IdCategoria = idCategoria;
+        //}
     }
 }
