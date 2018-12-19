@@ -17,7 +17,7 @@ namespace MeuEcommerce.Controllers
 
         public ActionResult AddItem(int id, int? categoria)
         {
-            var produto = _dbc.GetProdutoPorId(id);
+            var produto = _dal.GetProdutoPorId(id);
             var carrinho = GetCarrinho();
             carrinho.Add(produto);
 
@@ -38,11 +38,11 @@ namespace MeuEcommerce.Controllers
             */
             var model = new Models.HomeIndexViewModel();
 
-            model.Produtos = _dbc.GetProdutos();
+            model.Produtos = _dal.GetProdutos();
 
             model.CategoriaSelecionada = categoria;
 
-            model.Categorias = _dbc.GetCategorias();
+            model.Categorias = _dal.GetCategorias();
                 
 
             

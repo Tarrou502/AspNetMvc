@@ -1,5 +1,6 @@
 namespace MeuEcommerce.Migrations
 {
+    using MeuEcommerce.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,10 +15,13 @@ namespace MeuEcommerce.Migrations
 
         protected override void Seed(MeuEcommerce.DAL.Database context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            context.Categorias.AddOrUpdate(
+                new Categoria(1,"SmartPhones"),
+                new Categoria(2, "TVs"),
+                new Categoria(3, "Video Games"),
+                new Categoria(4, "Notebooks")
+                );
+            context.SaveChanges();
         }
     }
 }

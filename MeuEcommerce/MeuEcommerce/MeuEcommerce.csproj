@@ -172,10 +172,29 @@
     <Compile Include="Migrations\201812182350014_AlteracaodoNome.Designer.cs">
       <DependentUpon>201812182350014_AlteracaodoNome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812192139443_Criacao_Compra.cs" />
+    <Compile Include="Migrations\201812192139443_Criacao_Compra.Designer.cs">
+      <DependentUpon>201812192139443_Criacao_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812192148424_Compra_CompraItens.cs" />
+    <Compile Include="Migrations\201812192148424_Compra_CompraItens.Designer.cs">
+      <DependentUpon>201812192148424_Compra_CompraItens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812192157066_Compra_CompraItens2.cs" />
+    <Compile Include="Migrations\201812192157066_Compra_CompraItens2.Designer.cs">
+      <DependentUpon>201812192157066_Compra_CompraItens2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812192203379_Status.cs" />
+    <Compile Include="Migrations\201812192203379_Status.Designer.cs">
+      <DependentUpon>201812192203379_Status.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Carrinho.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\CheckoutIndexViewModel.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Compra.cs" />
+    <Compile Include="Models\CompraItem.cs" />
     <Compile Include="Models\HomeIndexViewModel.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,6 +285,7 @@
     <Content Include="Views\Checkout\Index.cshtml" />
     <Content Include="Views\Errors\InternalServerError.cshtml" />
     <Content Include="Views\Errors\NotFound.cshtml" />
+    <Content Include="Views\Checkout\CompraRealizada.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -287,6 +307,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812182350014_AlteracaodoNome.resx">
       <DependentUpon>201812182350014_AlteracaodoNome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812192139443_Criacao_Compra.resx">
+      <DependentUpon>201812192139443_Criacao_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812192148424_Compra_CompraItens.resx">
+      <DependentUpon>201812192148424_Compra_CompraItens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812192157066_Compra_CompraItens2.resx">
+      <DependentUpon>201812192157066_Compra_CompraItens2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812192203379_Status.resx">
+      <DependentUpon>201812192203379_Status.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

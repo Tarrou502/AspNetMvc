@@ -11,11 +11,13 @@ namespace MeuEcommerce.Models
         public int Id { get; set; }
         public string Nome { get; set; }
 
-        //public Categoria(int Id, string Nome)
-        //{
-        //    this.Id = Id;
-        //    this.Nome = Nome;
-        //}
+        public Categoria() { }
+
+        public Categoria(int Id, string Nome)
+        {
+            this.Id = Id;
+            this.Nome = Nome;
+        }
 
     }
 }

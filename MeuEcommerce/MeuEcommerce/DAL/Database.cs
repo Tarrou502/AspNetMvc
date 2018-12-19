@@ -14,8 +14,11 @@ namespace MeuEcommerce.DAL
     {
         public IDbSet<Categoria> Categorias { get; set; }
         public IDbSet<Produto> Produtos { get; set; }
-      
-        
+        public IDbSet<Cliente> Clientes { get; set; }
+        public IDbSet<Compra> Compras { get; set; }
+        public IDbSet<CompraItem> CompraItens { get; set; }
+
+
 
 
         public Database()
