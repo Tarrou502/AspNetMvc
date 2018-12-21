@@ -1,11 +1,12 @@
-﻿
-@model MeuEcommerce.Models.Compra
+﻿@model MeuEcommerce.Models.Compra
 
 @{
     ViewBag.Title = "CompraRealizada";
 }
 
-<h2>Compra Realizada com sucesso</h2>
+<h2>Parabens @Model.Usuario.UserName sua compra foi realializada com sucesso</h2>
+<br/>
+O código de sua compra e : @Model.Id
 
 <table class="table table-bordered table-striped">
     <thead>

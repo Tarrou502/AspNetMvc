@@ -15,9 +15,10 @@ Insert into [dbo].[Produtos] values ('Notebook Dell 17',5000,'/img/NotebookDell.
 Insert into [dbo].[Produtos] values ('Notebook Samsung 15',5500,'/img/NotebookSamsung.jpg','Notebook Samasung',4);                                        
 Insert into [dbo].[Produtos] values ('SmartPhone S9',5500,'/img/S9preto.jpg','S9 Samsung',1);                                        
 Insert into [dbo].[Produtos] values ('Smart TV Samsung 55',5300,'/img/TvSamsung55.jpg','TV Samsung',2);                                                  
+Insert into [dbo].[Produtos] values ('Xbox One',5300,'/img/XboxOne.jpg','TV Samsung',3); 
                     
                     
-                    new Models.Produto("Xbox One",8,"XboxOne",3),
+                    new Models.Produto("",8,"",3),
                     new Models.Produto("Notebook Apple Macbook",9,"NotebookAppleMacbook",4),
                     new Models.Produto("Smart TV Led Philco 39",10,"TvPhilco39",2),
                     new Models.Produto("Nintendo Wii",11,"NintendoWii",3),

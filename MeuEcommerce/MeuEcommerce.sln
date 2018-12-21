@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuEcommerce", "MeuEcommerce\MeuEcommerce.csproj", "{3CD88B00-2E60-4368-991C-BCB2DC47DEF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuEcommerce", "MeuEcommerce\MeuEcommerce.csproj", "{FDD2102D-29E9-42FE-AFD0-65CC68A792AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3CD88B00-2E60-4368-991C-BCB2DC47DEF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CD88B00-2E60-4368-991C-BCB2DC47DEF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CD88B00-2E60-4368-991C-BCB2DC47DEF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CD88B00-2E60-4368-991C-BCB2DC47DEF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDD2102D-29E9-42FE-AFD0-65CC68A792AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDD2102D-29E9-42FE-AFD0-65CC68A792AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDD2102D-29E9-42FE-AFD0-65CC68A792AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDD2102D-29E9-42FE-AFD0-65CC68A792AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {55B4795E-4A4B-4FFB-BD6E-F121ACA6B4D7}
+		SolutionGuid = {0F379771-E68D-4678-B6EF-AA96B2BFE274}
 	EndGlobalSection
 EndGlobal

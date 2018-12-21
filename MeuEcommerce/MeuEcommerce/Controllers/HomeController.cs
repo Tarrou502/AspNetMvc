@@ -1,5 +1,4 @@
-﻿using MeuEcommerce.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -7,21 +6,15 @@ using System.Web.Mvc;
 
 namespace MeuEcommerce.Controllers
 {
-
-
-    public class HomeController : BaseController
+    public class HomeController  : BaseController
     {
-        
-        
-       
-
         public ActionResult AddItem(int id, int? categoria)
         {
             var produto = _dal.GetProdutoPorId(id);
             var carrinho = GetCarrinho();
             carrinho.Add(produto);
 
-            return RedirectToAction("Index",new { categoria = categoria});
+            return RedirectToAction("Index", new { categoria = categoria });
         }
 
         public ActionResult Index(int? categoria)
@@ -43,22 +36,20 @@ namespace MeuEcommerce.Controllers
             model.CategoriaSelecionada = categoria;
 
             model.Categorias = _dal.GetCategorias();
-                
 
-            
+
+
 
             if (categoria != null)
             {
                 model.Produtos = model.Produtos
                     .Where(x => x.IdCategoria == categoria)
                     .ToArray();
-                
+
             }
             return View(model);
         }
 
-
-     
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

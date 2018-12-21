@@ -12,13 +12,18 @@ namespace MeuEcommerce.Models
         public DateTime Data { get; set; }
         public CompraStatus Status { get; set; }
         public virtual List<CompraItem> Itens { get; set; }
+
+        public  string UsuarioId { get; set; }
+        public virtual Usuario Usuario { get; set; }
+
         public Compra(){ }
 
-         public Compra(List<CompraItem> itens)
+         public Compra(string usuarioId,List<CompraItem> itens)
         {
             Data = DateTime.Now;
             Status = CompraStatus.AgPagamento;
             Itens = itens;
+            UsuarioId = usuarioId;
         }
 
         [NotMapped]

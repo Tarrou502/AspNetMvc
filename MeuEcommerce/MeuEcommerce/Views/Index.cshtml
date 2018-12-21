@@ -1,0 +1,85 @@
+﻿@model MeuEcommerce.Models.CheckoutIndexViewModel
+@{
+    ViewBag.Title = "Carrinho de Compra";
+}
+@section scripts{
+    <script>
+        function incrementa(produtoId) {
+            $.post("checkout", { acao: 'incrementa', produtoId: produtoId })
+                .done(function () {
+                    location.reload();
+                });
+        }
+
+        function decrementa(produtoId) {
+            $.post("checkout", { acao: 'decrementa', produtoId: produtoId })
+                .done(function () {
+                    location.reload();
+                });
+        }
+        function remover(produtoId) {
+            $.post("checkout", { acao: 'remover', produtoId: produtoId })
+                .done(function () {
+                    location.reload();
+                });
+        }
+    </script>
+    }
+<h2>Carrinho de Compra</h2>
+@if (ViewBag.Carrinho.QuantidadeDeItens == 0)
+{
+
+   <div class=alert alert-warning" role="alert">
+        Bem vindo: Seu Carrinho está vazio vamos a compra!
+    </div>
+}
+else
+{
+
+    <table class="table table-bordered table-striped">
+    <thead>
+        <tr class="bg-primary">
+            <th scope="col">Nome</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.Carrinho.Itens )
+        {
+        <tr>
+            <th scope="row"> @item.Value.Nome     </th>
+            <td>R$ @item.Value.PrecoUnitario.ToString("N2")   </td>
+            <td>
+                <a href="/checkout/incrementa/@item.Key" class="btn bg-primary">+</a>
+                @item.Value.Quantidade
+                <a href="/checkout/decrementa/@item.Key" class="btn btn-warning">-</a>
+                <a href="/checkout/remover/@item.Value.IdProduto" class="btn bg-danger">Remover</a>
+            </td>
+            
+            <!--
+            <td>
+                
+                
+                <button onclick="incrementa(@item.Value.IdProduto);" class="btn btn-primary">+</button>
+                <button onclick="decrementa(@item.Value.IdProduto);" class="btn btn-secondary">-</button>
+                <button onclick="remover(@item.Value.IdProduto);" class="btn btn-danger">Remover</button>
+
+            </td> -->
+        </tr>
+       }
+        <tr> <td colspan="1">Total
+              </td>
+              <td colspan="2">
+                  @Model.Carrinho.PrecoTotal.ToString("N2")
+              <td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/checkout/Limpar" class="btn btn-danger">Limpar</a>
+                <a href="/checkout/CompraRealizada" class="btn btn-success">Continuar</a>
+            </td> 
+        </tr>
+    </tbody>
+</table>
+}

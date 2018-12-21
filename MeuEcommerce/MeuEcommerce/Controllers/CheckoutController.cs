@@ -6,6 +6,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security;
 
 namespace MeuEcommerce.Controllers
 {
@@ -65,6 +67,7 @@ namespace MeuEcommerce.Controllers
 
         }
 
+        [Authorize]
         public ActionResult CompraRealizada()
         {
             var carrinho = GetCarrinho();
@@ -76,12 +79,16 @@ namespace MeuEcommerce.Controllers
                     item.Value.PrecoUnitario,
                     item.Value.IdProduto));
             }
-            var compra = new Compra(compraItens);
+
+            var usuarioId = User.Identity.GetUserId();
+            
+            var compra = new Compra(usuarioId,compraItens);
             _dal.Compras.Add(compra);
             _dal.SaveChanges();
 
             compra = _dal.Compras
                 .Include(c => c.Itens)
+                .Include(c => c.Usuario)
                 .Include(c => c.Itens.Select(i=> i.Produto))
                 .FirstOrDefault( item => item.Id == compra.Id);
             return View(compra);
